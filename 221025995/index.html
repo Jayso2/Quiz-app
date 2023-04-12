@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Multiple-Choice Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+   
+       <div class="container">
+        <button class="scores-btn btn" id="scores-btn">
+            View High Scores
+        </button>
+
+            <div class="quizStart">  
+                <h1>Jason's quiz game</h1>
+            </div>
+
+                <section id="startInstructions" class="quizStart">
+                    
+                    <button id="startButton" class="start-btn btn">START</button>
+                    
+                    <p><strong>RULES</strong> - Answer as many questions correctly as you can before the time runs out. Any incorrect answers will reduce your time
+                     by an additional 10 seconds. </p>
+                </section>
+            
+ <!--MultipleChoice quiz question section -->    
+        <quiz id="question-container" class="hide">
+            
+            <div id="timer" class="timer">
+                Time: 70 Sec
+            </div>
+
+            <div id="question"></div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer1</button>
+                <button class="btn">Answer2</button>
+                <button class="btn">Answer3</button>
+                <button class="btn">Answer4</button>
+            </div>
+
+            <div id="status" class="status hide">
+              <span id="correct">Right</span>
+              <span id="incorrect">Wrong</span>
+           </div>
+
+           <button id="next-btn" class="next-btn btn">Next</button> 
+
+        </quiz>
+
+        <section id="score-container" class="hide">
+            <form id="submit-form"  class="submit-info">
+                <p>Good Job !!!</p>
+                <p id="your-score"></p>
+               
+                <label id="initials-label">Enter your name to save the score:</label>
+                <br>
+                <input type="text" id="initials-field" maxlength="10" placeholder="Enter your name to save the score" />
+                <br>
+                
+                <button id="submit-btn" class="submit-btn btn">Submit</button>
+                <button id="restar-btn" class="restart-btn btn">Start Again</button>
+            </form>
+        </section>
+        
+        <section id="highscores" class="highscores-container hide">
+            <div id="high-scores">
+                <h1 class="centered">Leaderboard</h1>
+                
+                <div id="highscore" class="highscore highscore-list"></div>
+
+                <div class="controls">
+                    <button id="restart-btn" class="restart-btn btn">Retake quiz!</button>
+                    <button id="clear-btn" class="btn">Clear Scores</button>
+                </div>
+            </div>
+        </section>
+
+      </div>
+
+
+ <script src="script.js"></script>
+ </body>  
+</html>
